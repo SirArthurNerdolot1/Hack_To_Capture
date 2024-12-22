@@ -152,17 +152,25 @@ cat data8
 Finally we get the password:FO5dwFsc0cbaIiH0h8J2eUks2vdTDwAn
 
 ## Level 14
+while in bandit13 look for sshkey.private
 ```
+ls
+exit
+scp -P 2220 bandit13@bandit.labs.overthewire.org:sshkey.private . 
+ls -la
+chmod 700 sshkey.private 
+ls -la
 ssh -i sshkey.private bandit14@bandit.labs.overthewire.org -p 2220
 ```
-
+This will give direct access to bandit14
 ## Level 15
+While in bandit 14 access the password in /etc/bandit_pass/bandit14
 ```
 cd ..
 cd ..
 cat /etc/bandit_pass/bandit14
 ```
-This will give the password to enter in
+This will give the password MU4VWeTyJk8ROof1qqmcBPaLh7lDCPvS to enter in
 ```
 nc localhost 30000
 ```
